@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre las mejores playas de la República Dominicana con mapas interactivos, reseñas locales y ofertas exclusivas.">
+    <meta name="keywords" content="playas, República Dominicana, viajes, turismo, playas escondidas">
+    <meta name="author" content="Local Beaches DR">
+    <meta property="og:title" content="Encuentra las mejores playas de la República Dominicana">
+    <meta property="og:description" content="Descubre playas escondidas, ahorra tiempo en la planificación y accede a ofertas exclusivas.">
+    <meta property="og:type" content="website">
+    <title>Encuentra las mejores playas de la República Dominicana | Local Beaches DR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .gradient-tertiary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        .button-hover {
+            transition: all 300ms ease;
+        }
+        .button-hover:hover {
+            transform: scale(1.05);
+        }
+        .fade-in {
+            animation: fadeIn 600ms ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-primary text-white py-3 px-4 text-center text-sm md:text-base">
+        <i class="fas fa-shipping-fast mr-2"></i>Envío rápido a nivel mundial - Entrega en 5 días
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-location-dot text-2xl text-gradient"></i>
+                    <span class="text-xl font-bold text-gradient hidden sm:inline">Local Beaches DR</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Inicio</a>
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Características</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Beneficios</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Nosotros</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Testimonios</a>
+                    <a href="#faq" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Contacto</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block gradient-primary text-white px-6 py-2 rounded-full font-semibold button-hover">
+                        Explorar Playas
+                    </a>
+                    <button class="mobile-menu-button md:hidden text-gray-700 hover:text-purple-600 transition-colors duration-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="#home" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Inicio</a>
+                <a href="#features" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Características</a>
+                <a href="#benefits" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Beneficios</a>
+                <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Nosotros</a>
+                <a href="#testimonials" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Testimonios</a>
+                <a href="#faq" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">FAQ</a>
+                <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors duration-300 font-medium">Contacto</a>
+                <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="block mt-4 gradient-primary text-white px-6 py-2 rounded-full font-semibold text-center button-hover">
+                    Explorar Playas
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop&q=80" alt="Hermosa playa tropical de la República Dominicana" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                Encuentra las mejores playas de la República Dominicana
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 font-light leading-relaxed">
+                Descubre gemas de playas escondidas, ahorra tiempo en la planificación y accede a ofertas exclusivas
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="gradient-secondary text-white px-8 py-4 rounded-full font-bold text-lg button-hover inline-flex items-center justify-center">
+                    <i class="fas fa-compass mr-2"></i>Explorar Ahora
+                </a>
+                <a href="#features" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg button-hover inline-flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                    <i class="fas fa-arrow-down mr-2"></i>Descubre Más
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Características Principales
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Todo lo que necesitas para planificar tu viaje perfecto a las playas de la República Dominicana
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Interactive Beach Map -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 hover:border-purple-200">
+                    <div class="mb-6 inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full">
+                        <i class="fas fa-map text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Mapa de Playas Interactivo</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Explora un mapa interactivo completo con ubicaciones de playas, servicios cercanos y puntos de interés turístico.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Localización en tiempo real</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Filtros personalizables</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Información de acceso</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Local Reviews -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 hover:border-purple-200">
+                    <div class="mb-6 inline-flex items-center justify-center w-16 h-16 bg-gradient-secondary rounded-full">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Reseñas Locales</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Lee opiniones auténticas de viajeros locales y visitantes que conocen cada playa en detalle.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Calificaciones verificadas</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Fotos de usuarios</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Consejos prácticos</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Best Deals -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 hover:border-purple-200">
+                    <div class="mb-6 inline-flex items-center justify-center w-16 h-16 bg-gradient-tertiary rounded-full">
+                        <i class="fas fa-tag text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Las Mejores Ofertas</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Acceso exclusivo a ofertas especiales, paquetes de viaje y descuentos en alojamiento y actividades.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Descuentos exclusivos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Paquetes especiales</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Alertas de precios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Beneficios Exclusivos
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Descubre por qué miles de viajeros confían en nosotros
+                </p>
+            </div>
+
+            <!-- Benefit 1: Discover Hidden Beach Gems -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=600&fit=crop&q=80" alt="Playas escondidas de la República Dominicana" class="rounded-2xl shadow-xl w-full object-cover h-96 hover:shadow-2xl transition-shadow duration-300">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                            Descubre Gemas de Playas Escondidas
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Acceso a playas secretas y poco conocidas que los turistas típicos nunca encuentran. Nuestros expertos locales han identificado las joyas ocultas de la República Dominicana, lejos de las multitudes y con toda la belleza natural intacta.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Playas vírgenes sin explotar turísticamente</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Experiencias auténticas con la comunidad local</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Fotografías espectaculares y momentos inolvidables</span>
+                            </li>
+                        </ul>
+                        <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gradient-primary text-white px-6 py-3 rounded-full font-semibold button-hover">
+                            <i class="fas fa-compass mr-2"></i>Explorar Playas Escondidas
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Save Time Planning -->
+            <div class="mb-24 bg-white rounded-2xl p-12 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                            Ahorra Tiempo en la Planificación
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            No pierdas horas investigando. Nuestro sistema inteligente te presenta toda la información que necesitas en un solo lugar, organizada y actualizada constantemente.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Itinerarios sugeridos para cada tipo de viajero</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Información actualizada sobre condiciones climáticas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Guías completas de transporte y hospedaje</span>
+                            </li>
+                        </ul>
+                        <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gradient-secondary text-white px-6 py-3 rounded-full font-semibold button-hover">
+                            <i class="fas fa-clock mr-2"></i>Planificar Ahora
+                        </a>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop&q=80" alt="Planificación de viajes" class="rounded-2xl shadow-xl w-full object-cover h-96 hover:shadow-2xl transition-shadow duration-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3: Exclusive Access to Offers -->
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&q=80" alt="Ofertas exclusivas de viajes" class="rounded-2xl shadow-xl w-full object-cover h-96 hover:shadow-2xl transition-shadow duration-300">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                            Acceso Exclusivo a Ofertas Especiales
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Como miembro de nuestra comunidad, accede a ofertas y descuentos que no encontrarás en ningún otro lugar. Nuestras asociaciones con hoteles, restaurantes y operadores turísticos te garantizan los mejores precios.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Descuentos hasta 40% en alojamiento de lujo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Paquetes todo incluido con actividades acuáticas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle-check text-purple-600 mr-3 mt-1"></i>
+                                <span class="text-gray-700">Ofertas limitadas y flash sales exclusivas</span>
+                            </li>
+                        </ul>
+                        <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gradient-tertiary text-white px-6 py-3 rounded-full font-semibold button-hover">
+                            <i class="fas fa-gift mr-2"></i>Ver Ofertas Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80" alt="Equipo de Local Beaches DR" class="rounded-2xl shadow-xl w-full object-cover h-96 hover:shadow-2xl transition-shadow duration-300">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Sobre Nosotros
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Local Beaches DR fue fundada en 2018 por un grupo de apasionados viajeros y expertos en turismo que amaban las playas de la República Dominicana. Cansados de ver a turistas perdidos en playas masificadas, decidimos crear una plataforma que conectara a viajeros con las verdaderas gemas de nuestro país. Comenzamos como un pequeño blog de viajes y hemos crecido hasta convertirnos en la plataforma más confiable para descubrir playas en la República Dominicana, sirviendo a más de 100,000 viajeros cada año.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Nuestra misión es democratizar el acceso a información de viajes de calidad, permitiendo que cada viajero pueda descubrir las playas perfectas para sus necesidades, sin importar su presupuesto o experiencia. Creemos en el turismo sostenible que beneficia a las comunidades locales y preserva nuestros ecosistemas marinos. Nos comprometemos a proporcionar información honesta, actualizada y verificada, mientras apoyamos a pequeños negocios locales y promovemos prácticas de viaje responsable.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="text-center p-4 bg-purple-50 rounded-xl">
+                            <p class="text-3xl font-bold text-gradient mb-1">100K+</p>
+                            <p class="text-gray-600">Viajeros Satisfechos</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-xl">
+                            <p class="text-3xl font-bold text-gradient mb-1">50+</p>
+                            <p class="text-gray-600">Playas Catalogadas</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-xl">
+                            <p class="text-3xl font-bold text-gradient mb-1">6+</p>
+                            <p class="text-gray-600">Años de Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Lo que Dicen Nuestros Viajeros
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Descubre por qué miles de viajeros confían en Local Beaches DR para sus vacaciones perfectas
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 font-semibold">(5.0)</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Usé el mapa interactivo de Local Beaches DR para planificar mi viaje y descubrí Playa Rincón, una joya completamente desconocida para mí. Las reseñas locales fueron exactas y los consejos prácticos me ahorraron horas de investigación. ¡Definitivamente volveré a usar esta plataforma!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            MR
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">María Rodríguez</p>
+                            <p class="text-gray-600 text-sm">Viajera de Aventura</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 font-semibold">(5.0)</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Como viajero de negocios con poco tiempo, necesitaba encontrar la mejor playa rápidamente. Las ofertas exclusivas de Local Beaches DR me permitieron ahorrar más del 35% en un resort de lujo. El servicio al cliente fue excepcional en todo momento."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            CG
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Carlos González</p>
+                            <p class="text-gray-600 text-sm">Ejecutivo de Viajes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 font-semibold">(5.0)</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Llevé a mi familia a Playa Dorada basándome en las reseñas de Local Beaches DR y fue perfecto. Las fotos de usuarios nos ayudaron a prepararnos mejor, y los consejos sobre seguridad y servicios fueron invaluables. ¡Nuestras vacaciones fueron inolvidables!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-tertiary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            AR
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Ana Ramírez</p>
+                            <p class="text-gray-600 text-sm">Madre y Viajera en Familia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 font-semibold">(5.0)</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Como fotógrafo profesional, necesitaba playas con vistas espectaculares. Local Beaches DR no solo me mostró ubicaciones increíbles, sino que también me conectó con guías locales que conocían los mejores ángulos. Las fotos que tomé fueron las mejores de mi carrera."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            JM
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Juan Martínez</p>
+                            <p class="text-gray-600 text-sm">Fotógrafo Profesional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Preguntas Frecuentes
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Encuentra respuestas a las preguntas más comunes sobre nuestro servicio
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-purple-300 transition-colors duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-purple-50 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 text-left">
+                            ¿Cómo accedo a las playas escondidas?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Acceder a nuestras playas escondidas es muy simple. Primero, crea una cuenta gratuita en Local Beaches DR. Luego, utiliza nuestro mapa interactivo para explorar diferentes playas. Cada playa tiene información detallada sobre ubicación, acceso, servicios disponibles y reseñas de viajeros. También ofrecemos guías descargables y direcciones GPS para facilitar tu llegada. Para obtener acceso a las ofertas exclusivas y descuentos especiales, considera actualizar a nuestra membresía premium.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-purple-300 transition-colors duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-purple-50 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 text-left">
+                            ¿Cuál es la mejor época del año para visitar las playas de la República Dominicana?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            La mejor época para visitar depende de tus preferencias personales. La temporada seca va de diciembre a abril, con clima perfecto y menos lluvia. Sin embargo, esta es también la temporada alta con más turistas y precios más altos. La temporada de huracanes (junio a noviembre) ofrece precios más bajos y menos multitudes, aunque hay más posibilidad de lluvia. Recomendamos mayo y noviembre como meses de transición con buen clima y menos turismo. Nuestro calendario interactivo te muestra las condiciones climáticas promedio para cada playa en cada mes, ayudándote a elegir el momento perfecto.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-purple-300 transition-colors duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-purple-50 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 text-left">
+                            ¿Qué tipo de actividades puedo hacer en las playas?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Las playas de la República Dominicana ofrecen una amplia variedad de actividades para todos los gustos. Puedes disfrutar de deportes acuáticos como buceo, snorkel, windsurf y kitesurfing. Para los más aventureros, hay excursiones en bote, pesca deportiva y tours de fauna marina. Si prefieres relajarte, encontrarás playas tranquilas perfectas para tomar el sol, leer o meditar. También hay opciones de yoga en la playa, masajes, restaurantes de mariscos frescos y vida nocturna. Nuestro mapa interactivo te muestra exactamente qué actividades están disponibles en cada playa, con recomendaciones de operadores locales confiables.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-purple-300 transition-colors duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-purple-50 transition-colors duration-300">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 text-left">
+                            ¿Cómo puedo garantizar que mis datos personales estén seguros?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            La seguridad de tus datos es nuestra máxima prioridad. Utilizamos encriptación SSL de 256 bits para proteger toda la información transmitida a través de nuestro sitio. Nuestros servidores están protegidos por firewalls de última generación y se someten a auditorías de seguridad regularmente. No vendemos ni compartimos tus datos personales con terceros sin tu consentimiento explícito. Puedes revisar nuestra política de privacidad completa en cualquier momento. Si tienes preguntas específicas sobre seguridad, nuestro equipo de soporte está disponible 24/7 para ayudarte.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1495954484750-af469f1357be?w=1600&h=900&fit=crop&q=80" alt="Playas hermosas para explorar" class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                ¿Listo para tu Aventura Perfecta?
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 font-light leading-relaxed">
+                Únete a miles de viajeros que ya descubrieron sus playas favoritas con Local Beaches DR
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://localbeachesdr.com" target="_blank" rel="noopener noreferrer" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg button-hover inline-flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                    <i class="fas fa-arrow-right mr-2"></i>Comienza Ahora
+                </a>
+                <a href="#contact" class="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg button-hover inline-flex items-center justify-center border-2 border-white hover:bg-white/30 transition-colors duration-300">
+                    <i class="fas fa-question-circle mr-2"></i>Contacta con Nosotros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Ponte en Contacto
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Tenemos un equipo dedicado listo para ayudarte con cualquier pregunta
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Contact Info 1 -->
+                <div class="bg-white rounded-2xl p-8 text-center card-hover border border-gray-100">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                    <a href="mailto:info@localbeachesdr.com" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors duration-300">
+                        info@localbeachesdr.com
+                    </a>
+                </div>
+
+                <!-- Contact Info 2 -->
+                <div class="bg-white rounded-2xl p-8 text-center card-hover border border-gray-100">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-secondary rounded-full">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Teléfono</h3>
+                    <a href="tel:+18095551234" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors duration-300">
+                        +1 (809) 555-1234
+                    </a>
+                </div>
+
+                <!-- Contact Info 3 -->
+                <div class="bg-white rounded-2xl p-8 text-center card-hover border border-gray-100">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-tertiary rounded-full">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ubicación</h3>
+                    <p class="text-gray-600">
+                        Santo Domingo, República Dominicana
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-900 font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" aria-label="Nombre completo">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-900 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" aria-label="Correo electrónico">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-900 font-semibold mb-2">Asunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="¿En qué podemos ayudarte?" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300" aria-label="Asunto del mensaje">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-900 font-semibold mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Cuéntanos tu pregunta o comentario..." required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300 resize-none" aria-label="Mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="w-full gradient-primary text-white px-6 py-4 rounded-full font-bold text-lg button-hover inline-flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Footer Column 1: Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-map-location-dot text-2xl text-gradient-primary"></i>
+                        <span class="text-xl font-bold text-white">Local Beaches DR</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Descubre las mejores playas de la República Dominicana con mapas interactivos, reseñas locales y ofertas exclusivas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="YouTube">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Enlaces Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Inicio</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Características</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Beneficios</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonios</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Resources -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Recursos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contacto</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4: Contact Info -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contacto</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-purple-600 mr-3 mt-1"></i>
+                            <a href="mailto:info@localbeachesdr.com" class="text-gray-400 hover:text-white transition-colors duration-300">info@localbeachesdr.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-purple-600 mr-3 mt-1"></i>
+                            <a href="tel:+18095551234" class="text-gray-400 hover:text-white transition-colors duration-300">+1 (809) 555-1234</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-purple-600 mr-3 mt-1"></i>
+                            <span class="text-gray-400">Santo Domingo, República Dominicana</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-400">
+                            &copy; <span id="year">2024</span> Local Beaches DR. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
+                        <p class="text-gray-400">
+                            <i class="fas fa-shipping-fast mr-2"></i>Envío rápido a nivel mundial (5 días)
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-shield-alt mr-2"></i>Garantía 100% de satisfacción
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+
+            // Form Submission Handler
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Here you would typically send the form data to a server
+                    alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+                    contactForm.reset();
+                });
+            }
+
+            // Sticky Header Shadow on Scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
