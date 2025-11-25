@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre las mejores playas de la República Dominicana con mapas interactivos, reseñas locales y ofertas exclusivas.">
+    <meta name="keywords" content="playas, República Dominicana, viajes, turismo, playas escondidas">
+    <meta name="author" content="Local Beaches DR">
+    <meta property="og:title" content="Encuentra las mejores playas de la República Dominicana">
+    <meta property="og:description" content="Descubre playas escondidas, ahorra tiempo en la planificación y accede a ofertas exclusivas.">
+    <meta property="og:type" content="website">
+    <title>Términos de Servicio | Local Beaches DR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .gradient-tertiary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        .button-hover {
+            transition: all 300ms ease;
+        }
+        .button-hover:hover {
+            transform: scale(1.05);
+        }
+        .fade-in {
+            animation: fadeIn 600ms ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-primary text-white py-3 px-4 text-center text-sm md:text-base">
+        <i class="fas fa-shipping-fast mr-2"></i>Envío rápido a nivel mundial - Entrega en 5 días
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya" class="flex items-center space-x-2">
+                    <i class="fas fa-map-location-dot text-2xl text-gradient"></i>
+                    <span class="text-xl font-bold text-gradient hidden sm:inline">Local Beaches DR</span>
+                </a>
+
+                <!-- Back Link -->
+                <a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>Atrás
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Terms of Service Hero Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Términos de Servicio
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Última actualización: <span id="lastUpdated">25 de noviembre de 2024</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Introduction -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    1. Introducción
+                </h2>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Bienvenido a Local Beaches DR ("Sitio Web", "Servicio", "Nosotros" o "Nuestro"). Estos Términos de Servicio ("Términos") regulan tu acceso y uso del sitio web localbeachesdr.com, así como todos los servicios, contenido y productos relacionados ofrecidos por Local Beaches DR ("Servicios").
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Al acceder o utilizar nuestro Sitio Web y Servicios, aceptas estar vinculado por estos Términos de Servicio. Si no estás de acuerdo con alguna parte de estos términos, entonces no puedes utilizar nuestros Servicios. Estos Términos de Servicio se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el Servicio.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Local Beaches DR se reserva el derecho de cambiar, modificar, agregar o eliminar partes de estos Términos de Servicio en cualquier momento. Es tu responsabilidad revisar estos Términos periódicamente para estar informado de cualquier cambio. Tu uso continuo del Sitio Web después de cualquier cambio constituye tu aceptación de los nuevos Términos.
+                </p>
+            </div>
+
+            <!-- User Agreements Section -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    2. Acuerdos del Usuario
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        2.1 Elegibilidad
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Para utilizar nuestros Servicios, debes tener al menos 18 años de edad o la edad de mayoría legal en tu jurisdicción, lo que sea mayor. Al utilizar nuestro Sitio Web, garantizas y declaras que tienes la edad legal requerida y que posees la autoridad legal para celebrar estos Términos de Servicio.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Si eres menor de 18 años, no puedes utilizar nuestros Servicios. Los padres o tutores que permitan a menores utilizar nuestros Servicios son responsables del cumplimiento de estos Términos y de la supervisión del uso de nuestro Sitio Web por parte del menor.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        2.2 Información de la Cuenta
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Si creas una cuenta con nosotros, debes proporcionar información que sea precisa, completa y actual. Eres responsable de mantener la confidencialidad de tu contraseña y de toda la información de tu cuenta. Aceptas asumir la responsabilidad de todas las actividades que ocurran bajo tu cuenta.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Debes notificarnos inmediatamente de cualquier acceso no autorizado a tu cuenta o de cualquier otra violación de seguridad. Local Beaches DR no será responsable de ninguna pérdida o daño resultante de tu incumplimiento de estas obligaciones.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Te comprometes a no permitir que otra persona utilice tu cuenta. Eres el único responsable de la actividad que ocurra en tu cuenta durante tu sesión.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        2.3 Contenido del Usuario
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Algunos de nuestros Servicios permiten que publiques, cargues, transmitas o de otro modo comuniques contenido, incluyendo texto, fotos, videos, reseñas y comentarios ("Contenido del Usuario"). Al enviar Contenido del Usuario, garantizas que posees todos los derechos necesarios sobre dicho contenido y que su publicación no viola ninguna ley o derecho de terceros.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Al enviar Contenido del Usuario a nuestro Sitio Web, otorgas a Local Beaches DR una licencia mundial, no exclusiva, libre de regalías, perpetua e irrevocable para usar, reproducir, modificar, adaptar, publicar, traducir y distribuir dicho contenido en cualquier medio.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Eres responsable de tu Contenido del Usuario y de las consecuencias de publicarlo. Aceptas no publicar contenido que sea ofensivo, difamatorio, obsceno, ilegal, o que viole los derechos de terceros.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Acceptable Use Section -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    3. Política de Uso Aceptable
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Al utilizar nuestro Sitio Web y Servicios, aceptas no:
+                </p>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Utilizar el Sitio Web para cualquier propósito ilegal o no autorizado, o de manera que viole cualquier ley o regulación local, estatal, nacional o internacional aplicable.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Publicar, transmitir o comunicar contenido que sea abusivo, amenazante, difamatorio, obsceno, ofensivo o que viole la privacidad de cualquier persona.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Intentar obtener acceso no autorizado a nuestro Sitio Web, sistemas o redes, o a cualquier contenido protegido o información personal de otros usuarios.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Distribuir virus, malware, código malicioso o cualquier otra tecnología que pueda dañar nuestro Sitio Web o los dispositivos de otros usuarios.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Participar en actividades de spam, phishing, suplantación de identidad o cualquier otra forma de fraude o engaño.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Usar el Sitio Web para acoso, intimidación o discriminación de cualquier persona o grupo.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Recopilar o rastrear información personal de otros usuarios sin su consentimiento expreso.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Reproducir, duplicar, copiar, vender, revender o explotar cualquier parte del Sitio Web sin permiso expreso de Local Beaches DR.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Utilizar bots, scrapers, crawlers u otras herramientas automatizadas para acceder al Sitio Web sin autorización.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 font-bold mr-4">•</span>
+                        <span class="text-lg text-gray-700">Interferir con el funcionamiento normal del Sitio Web o de cualquier servidor o red conectada a él.</span>
+                    </li>
+                </ul>
+
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Local Beaches DR se reserva el derecho de suspender o terminar tu acceso al Sitio Web en cualquier momento, sin previo aviso, si determinamos que has violado esta Política de Uso Aceptable o cualquier otra disposición de estos Términos de Servicio.
+                </p>
+            </div>
+
+            <!-- Intellectual Property Section -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    4. Propiedad Intelectual
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        4.1 Propiedad de Contenido
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Todo el contenido del Sitio Web, incluyendo pero no limitado a texto, gráficos, logos, imágenes, videos, clips de audio, código digital y software, es propiedad de Local Beaches DR o de sus proveedores de contenido y está protegido por leyes de derechos de autor internacionales.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Se te otorga una licencia limitada, no exclusiva, intransferible y revocable para acceder y utilizar el Sitio Web únicamente para propósitos personales y no comerciales. No puedes reproducir, distribuir, transmitir, mostrar, ejecutar, publicar, licenciar, crear trabajos derivados de, transferir o vender ninguno de los contenidos sin el permiso expreso escrito de Local Beaches DR.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        4.2 Marcas Comerciales
+                    </h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        "Local Beaches DR" y todos los logos, marcas, nombres de dominio y otros identificadores de marca relacionados son marcas comerciales registradas de Local Beaches DR. No tienes permiso para utilizar estas marcas sin el consentimiento expreso escrito de Local Beaches DR.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Limitation of Liability Section -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    5. Limitación de Responsabilidad
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        5.1 Exención de Garantías
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        NUESTRO SITIO WEB Y SERVICIOS SE PROPORCIONAN "TAL COMO ESTÁN" Y "SEGÚN DISPONIBILIDAD" SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS. LOCAL BEACHES DR RENUNCIA ESPECÍFICAMENTE A TODAS LAS GARANTÍAS IMPLÍCITAS, INCLUYENDO PERO NO LIMITADAS A LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        No garantizamos que nuestro Sitio Web será ininterrumpido, seguro, libre de errores o que los defectos serán corregidos. No hacemos ninguna representación sobre la precisión, integridad o actualidad de la información contenida en nuestro Sitio Web.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        5.2 Limitación de Daños
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        EN NINGÚN CASO LOCAL BEACHES DR SERÁ RESPONSABLE POR DAÑOS INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES, PUNITIVOS O EJEMPLARES, INCLUYENDO PERO NO LIMITADOS A DAÑOS POR PÉRDIDA DE GANANCIAS, PÉRDIDA DE DATOS, PÉRDIDA DE USO O CUALQUIER OTRA PÉRDIDA PECUNIARIA, INCLUSO SI LOCAL BEACHES DR HA SIDO ADVERTIDA DE LA POSIBILIDAD DE TALES DAÑOS.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        NUESTRA RESPONSABILIDAD TOTAL POR CUALQUIER RECLAMACIÓN ARISING OUT OF O RELACIONADA CON ESTOS TÉRMINOS O NUESTROS SERVICIOS NO EXCEDERÁ LA CANTIDAD QUE PAGASTE A LOCAL BEACHES DR EN LOS ÚLTIMOS DOCE MESES, O CIEN DÓLARES (USD $100), LO QUE SEA MENOR.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Algunas jurisdicciones no permiten la exclusión o limitación de daños incidentales, consecuentes o especiales, por lo que estas limitaciones pueden no aplicarse a ti.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        5.3 Indemnización
+                    </h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Aceptas indemnizar, defender y mantener indemne a Local Beaches DR, sus propietarios, empleados, agentes y sucesores de cualquier reclamo, demanda, pérdida, daño, responsabilidad, costo o gasto (incluyendo honorarios legales) que surja de o esté relacionado con tu uso del Sitio Web, tu violación de estos Términos de Servicio, o tu violación de cualquier derecho de terceros.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Disclaimer Section -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    6. Descargo de Responsabilidad
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Local Beaches DR no es responsable de la precisión, integridad o utilidad de cualquier información proporcionada por terceros en nuestro Sitio Web. Esto incluye reseñas de usuarios, comentarios, fotos y cualquier otro contenido generado por usuarios.
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Aunque nos esforzamos por mantener información precisa y actualizada sobre playas, servicios y ofertas, no podemos garantizar la exactitud de toda la información. Los precios, disponibilidad y condiciones de los servicios están sujetos a cambios sin previo aviso.
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Local Beaches DR no es responsable de ningún daño, lesión, pérdida o gasto resultante de tu viaje a cualquier playa o participación en cualquier actividad recomendada en nuestro Sitio Web. Siempre verifica las condiciones actuales, consulta con autoridades locales y toma precauciones de seguridad apropiadas antes de viajar.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Algunos servicios y ofertas pueden estar sujetos a términos y condiciones adicionales establecidos por proveedores de terceros. Local Beaches DR no es responsable de estos términos adicionales ni de ningún incumplimiento por parte de los proveedores.
+                </p>
+            </div>
+
+            <!-- Links to Third Party Sites -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    7. Enlaces a Sitios de Terceros
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Nuestro Sitio Web puede contener enlaces a sitios web de terceros que no son operados por Local Beaches DR. No tenemos control sobre el contenido, precisión, confiabilidad o prácticas de estos sitios externos.
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Tu acceso y uso de sitios web de terceros está sujeto a los términos de servicio y políticas de privacidad de esos sitios. Local Beaches DR no es responsable de ningún daño, pérdida o gasto resultante de tu acceso o uso de sitios web de terceros.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    La inclusión de cualquier enlace a un sitio web de terceros no constituye un respaldo de ese sitio o su contenido por parte de Local Beaches DR.
+                </p>
+            </div>
+
+            <!-- Termination -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    8. Terminación
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Local Beaches DR se reserva el derecho de suspender o terminar tu acceso al Sitio Web en cualquier momento, por cualquier motivo, con o sin causa, y con o sin previo aviso. Las causas de terminación pueden incluir, pero no se limitan a, violación de estos Términos de Servicio, actividad ilegal o no autorizada, o comportamiento que Local Beaches DR considere inapropiado.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Después de la terminación, tu derecho a utilizar el Sitio Web cesará inmediatamente. Las disposiciones de estos Términos de Servicio que por su naturaleza deben sobrevivir a la terminación, incluyendo pero no limitadas a Propiedad Intelectual, Limitación de Responsabilidad e Indemnización, continuarán en vigor.
+                </p>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    9. Ley Aplicable y Jurisdicción
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Estos Términos de Servicio se rigen por y se interpretan de conformidad con las leyes de la República Dominicana, sin considerar sus disposiciones sobre conflictos de leyes.
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Cualquier acción legal o procedimiento que surja de o esté relacionado con estos Términos de Servicio o tu uso del Sitio Web será presentado exclusivamente ante los tribunales ubicados en Santo Domingo, República Dominicana. Al utilizar nuestro Sitio Web, aceptas irrevocablemente la jurisdicción exclusiva de estos tribunales.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Si eres residente de una jurisdicción que no permite la selección de leyes o jurisdicción anterior, entonces las leyes de tu jurisdicción de residencia se aplicarán, pero la jurisdicción exclusiva permanecerá con los tribunales de Santo Domingo, República Dominicana, en la medida permitida por la ley.
+                </p>
+            </div>
+
+            <!-- Dispute Resolution -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    10. Resolución de Disputas
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Antes de iniciar cualquier acción legal, ambas partes aceptan intentar resolver cualquier disputa informalmente mediante negociación de buena fe.
+                </p>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Si no se puede llegar a una resolución dentro de treinta (30) días, cualquiera de las partes puede iniciar procedimientos de arbitraje vinculante de conformidad con las reglas de arbitraje de la Cámara de Comercio de Santo Domingo. El arbitraje será conducido en español por un árbitro neutral mutuamente acordado.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cada parte asumirá sus propios costos de arbitraje, y los costos del árbitro serán compartidos equitativamente. La decisión del árbitro será final y vinculante y podrá ser ejecutada en cualquier tribunal de jurisdicción competente.
+                </p>
+            </div>
+
+            <!-- Severability -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    11. Separabilidad
+                </h2>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Si alguna disposición de estos Términos de Servicio es declarada inválida, ilegal o inaplicable por un tribunal de jurisdicción competente, esa disposición será modificada en la medida mínima necesaria para hacerla válida y exigible, o si no es posible, será eliminada. Las disposiciones restantes de estos Términos permanecerán en plena vigencia y efecto.
+                </p>
+            </div>
+
+            <!-- Entire Agreement -->
+            <div class="mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    12. Acuerdo Completo
+                </h2>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Estos Términos de Servicio, junto con nuestra Política de Privacidad y cualquier otro documento incorporado por referencia, constituyen el acuerdo completo y definitivo entre tú y Local Beaches DR con respecto a tu uso del Sitio Web y reemplazan todos los acuerdos, entendimientos y negociaciones anteriores, ya sean escritas u orales.
+                </p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="mb-12 fade-in bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    13. Información de Contacto
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Si tienes preguntas sobre estos Términos de Servicio, preocupaciones sobre el contenido de nuestro Sitio Web, o deseas reportar una violación de estos términos, por favor contáctanos a través de los siguientes medios:
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="mb-4 inline-flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-full flex-shrink-0">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                            <a href="mailto:legal@localbeachesdr.com" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors duration-300">
+                                legal@localbeachesdr.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="mb-4 inline-flex items-center justify-center w-12 h-12 bg-gradient-secondary rounded-full flex-shrink-0">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Teléfono</h3>
+                            <a href="tel:+18095551234" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors duration-300">
+                                +1 (809) 555-1234
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="mb-4 inline-flex items-center justify-center w-12 h-12 bg-gradient-tertiary rounded-full flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Dirección</h3>
+                            <p class="text-gray-700">
+                                Local Beaches DR<br>
+                                Santo Domingo<br>
+                                República Dominicana
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="mb-4 inline-flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full flex-shrink-0">
+                            <i class="fas fa-globe text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sitio Web</h3>
+                            <a href="https://localbeachesdr.com" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors duration-300">
+                                www.localbeachesdr.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 mt-8 leading-relaxed">
+                    Nos comprometemos a responder a todas las consultas dentro de cinco (5) días hábiles. Por favor, incluye toda la información relevante en tu mensaje para ayudarnos a procesar tu solicitud de manera eficiente.
+                </p>
+            </div>
+
+            <!-- Acknowledgment -->
+            <div class="fade-in bg-purple-50 rounded-2xl p-8 border border-purple-200">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    <strong>Reconocimiento:</strong> Al utilizar Local Beaches DR, reconoces que has leído estos Términos de Servicio, que los comprendes y que aceptas estar vinculado por ellos. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro Sitio Web o Servicios.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Footer Column 1: Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-map-location-dot text-2xl text-gradient-primary"></i>
+                        <span class="text-xl font-bold text-white">Local Beaches DR</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Descubre las mejores playas de la República Dominicana con mapas interactivos, reseñas locales y ofertas exclusivas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300" aria-label="YouTube">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Enlaces Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya" class="text-gray-400 hover:text-white transition-colors duration-300">Inicio</a></li>
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#features" class="text-gray-400 hover:text-white transition-colors duration-300">Características</a></li>
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Beneficios</a></li>
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#about" class="text-gray-400 hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonios</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Resources -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Recursos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#faq" class="text-gray-400 hover:text-white transition-colors duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="https://RonAdames.github.io/find-the-best-beaches-in-the-dominican-republic-2025-11-25-iyeya#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contacto</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Política de Privacidad</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 4: Contact Info -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contacto</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-purple-600 mr-3 mt-1"></i>
+                            <a href="mailto:info@localbeachesdr.com" class="text-gray-400 hover:text-white transition-colors duration-300">info@localbeachesdr.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-purple-600 mr-3 mt-1"></i>
+                            <a href="tel:+18095551234" class="text-gray-400 hover:text-white transition-colors duration-300">+1 (809) 555-1234</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-purple-600 mr-3 mt-1"></i>
+                            <span class="text-gray-400">Santo Domingo, República Dominicana</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-400">
+                            &copy; <span id="year">2024</span> Local Beaches DR. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
+                        <p class="text-gray-400">
+                            <i class="fas fa-shipping-fast mr-2"></i>Envío rápido a nivel mundial (5 días)
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-shield-alt mr-2"></i>Garantía 100% de satisfacción
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Set last updated date
+            const lastUpdated = document.getElementById('lastUpdated');
+            if (lastUpdated) {
+                const today = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                lastUpdated.textContent = today.toLocaleDateString('es-ES', options);
+            }
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+
+            // Sticky Header Shadow on Scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
